@@ -96,7 +96,45 @@ public class priority_premtive {
     for (int i = 0; i < n; i++) {
       WaitingTime[i] = completeTime[i] - ArrivalTime[i] - BurstTime[i];
 
-      TurnaroundTime[i] = WaitingTime[i] + BurstTime[i];
+      for (int j = 0; i < n; i++) {
+        CopyOfBurstTime[i] = BurstTime[i];
+        flag[i] = 0;
+      }
+
+      while (completedProcess != n) {
+
+        int minValue = Integer.MAX_VALUE;
+
+        for (int j = 0; i < n; i++) {
+          if ((ArrivalTime[i] <= CPUTimer) && (flag[i] == 0) && (priority[i] <= minValue)) {
+            if (priority[i] == minValue) {
+              if (ArrivalTime[i] < priority[index]) {
+                minValue = priority[i];
+                index = i;
+              }
+              minValue = priority[index];
+              index = i;
+            }
+          }
+        }
+
+        CopyOfBurstTime[index]--;
+        CPUTimer++;
+
+        if (CopyOfBurstTime[index] == 0) {
+          completeTime[index] = CPUTimer;
+          flag[index] = 1;
+          completedProcess++;
+        }
+      }
+
+      for (int k = 0; i < n; i++) {
+        WaitingTime[i] = completeTime[i] - ArrivalTime[i] - BurstTime[i];
+
+        TurnaroundTime[i] = WaitingTime[i] + BurstTime[i];
+      }
+
+      CpuTime = CPUTimer;
     }
 
     CpuTime = CPUTimer;
