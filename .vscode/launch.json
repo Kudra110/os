@@ -1,49 +1,56 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Launch Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Launch FirstLab",
-            "request": "launch",
-            "mainClass": "FirstLab",
-            "projectName": "OS_44818b60"
-        },
-        {
-            "type": "java",
-            "name": "Launch HomeWork1",
-            "request": "launch",
-            "mainClass": "HomeWork1",
-            "projectName": "OS_44818b60"
-        },
-        {
-            "type": "java",
-            "name": "Launch HomeWork2",
-            "request": "launch",
-            "mainClass": "HomeWork2",
-            "projectName": "OS_44818b60"
-        },
-        {
-            "type": "java",
-            "name": "Launch SecondLab",
-            "request": "launch",
-            "mainClass": "SecondLab",
-            "projectName": "OS_44818b60"
-        },
-        {
-            "type": "java",
-            "name": "Launch ThirdLab",
-            "request": "launch",
-            "mainClass": "ThirdLab",
-            "projectName": "OS_44818b60"
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch priority_premtive",
+      "request": "launch",
+      "mainClass": "priority_premtive",
+      "projectName": "os_b6cc6916"
+    },
+    {
+      "type": "java",
+      "name": "Launch Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Launch FirstLab",
+      "request": "launch",
+      "mainClass": "FirstLab",
+      "projectName": "OS_44818b60"
+    },
+    {
+      "type": "java",
+      "name": "Launch HomeWork1",
+      "request": "launch",
+      "mainClass": "HomeWork1",
+      "projectName": "OS_44818b60"
+    },
+    {
+      "type": "java",
+      "name": "Launch HomeWork2",
+      "request": "launch",
+      "mainClass": "HomeWork2",
+      "projectName": "OS_44818b60"
+    },
+    {
+      "type": "java",
+      "name": "Launch SecondLab",
+      "request": "launch",
+      "mainClass": "SecondLab",
+      "projectName": "OS_44818b60"
+    },
+    {
+      "type": "java",
+      "name": "Launch ThirdLab",
+      "request": "launch",
+      "mainClass": "ThirdLab",
+      "projectName": "OS_44818b60"
+    }
+  ]
 }
