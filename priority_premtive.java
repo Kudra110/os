@@ -13,16 +13,19 @@ public class priority_premtive {
     static int n = 5;
     static int ProcessID[] = new int[5];
     static int ArrivalTime[] = new int[5];
+    static int ArrivalTime2[] = new int[5];
+
     static int BurstTime[] = new int[5];
     static int WaitingTime[] = new int[5];
     static int TurnaroundTime[] = new int[5];
     static int priority[] = new int[5];
+    static  String states[] = new String[5];
     static int CpuTime = 0;
 
     public static void main(String[] args) {
 
         // SJF , Primitive , WithArrivalTime
-        String states[] = new String[5];
+
 
         read();
         priority();
@@ -78,7 +81,11 @@ public class priority_premtive {
             int minValue = Integer.MAX_VALUE;
 
             for (int i = 0; i < n; i++) {
-                if ((ArrivalTime[i] <= CPUTimer) && (flag[i] == 0) && (priority[i] < minValue)) {
+                if ((ArrivalTime[i] <= CPUTimer) && (flag[i] == 0) && (priority[i] <= minValue)) {
+                    if ((priority[i]== minValue) && ArrivalTime[i]<ArrivalTime2[index]){
+                        minValue = priority[i];
+                        index = i;
+                    }
                     minValue = priority[i];
                     index = i;
                 }
@@ -86,7 +93,12 @@ public class priority_premtive {
 
             CopyOfBurstTime[index]--;
             CPUTimer++;
+    if (   CopyOfBurstTime[index]< BurstTime[index]){
+      states[index]="ready";
+      ArrivalTime2[index]=CPUTimer;
 
+
+    }
             if (CopyOfBurstTime[index] == 0) {
                 completeTime[index] = CPUTimer;
                 flag[index] = 1;
