@@ -13,7 +13,6 @@ public class priority_premtive {
     static int n = 5;
     static int ProcessID[] = new int[5];
     static int ArrivalTime[] = new int[5];
-    static int ArrivalTimee[] = new int[5];
     static int BurstTime[] = new int[5];
     static int WaitingTime[] = new int[5];
     static int TurnaroundTime[] = new int[5];
@@ -79,15 +78,9 @@ public class priority_premtive {
             int minValue = Integer.MAX_VALUE;
 
             for (int i = 0; i < n; i++) {
-                if ((ArrivalTime[i] <= CPUTimer) && (flag[i] == 0) && (priority[i] <= minValue)) {
-                  if(priority[i]==minValue){
-                      if (ArrivalTime[i]<priority[index]){
-minValue=priority[i];
-index=i;
-                      }
-                      minValue=priority[index];
-                      index=i;
-                  }
+                if ((ArrivalTime[i] <= CPUTimer) && (flag[i] == 0) && (priority[i] < minValue)) {
+                    minValue = priority[i];
+                    index = i;
                 }
             }
 
@@ -123,10 +116,8 @@ index=i;
                 int pro = priority[k];
                 if (arrivalTime == i)
                     processState[k] = "new";
-                if (arrivalTime < i){
+                if (arrivalTime < i)
                     processState[k] = "ready";
-                ArrivalTimee[i]=CpuTime;
-                }
                 if (arrivalTime + waitingTime <= i)
                     processState[k] = "running";
                 if (turnaroundTime <= i)
