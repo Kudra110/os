@@ -82,8 +82,11 @@ public class priority_premtive {
                 if ((ArrivalTime[i] <= CPUTimer) && (flag[i] == 0) && (priority[i] <= minValue)) {
                   if(priority[i]==minValue){
                       if (ArrivalTime[i]<priority[index]){
-
+minValue=priority[i];
+index=i;
                       }
+                      minValue=priority[index];
+                      index=i;
                   }
                 }
             }
